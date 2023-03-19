@@ -1,0 +1,288 @@
+1)Question:- What are local variables and global variables in Python? 
+    Answer:-    Global Variables:
+
+                         Variables declared outside a function or in global space are called global variables. These variables can be accessed by any function in the program.
+
+                          Local Variables:
+
+                         Any variable declared inside a function is known as a local variable. This variable is present in the local space and not in the global space.
+
+                         Example:
+                         1
+                          2
+                         3
+                         4
+                         5
+                         6
+	
+                         a=2
+                         def add():
+                         b=3
+                         c=a+b
+                          print(c)
+                         add()
+
+                       Output: 5
+
+                       When you try to access the local variable outside the function add(), it will throw an error   
+
+2)Question:-  What are Dict and List comprehensions?
+Answer:-Dictionary and list comprehensions are just another concise way to define dictionaries and lists.
+
+                 Example of list comprehension is-
+                 1
+                 x=[i for i in range(5)]
+                The above code creates a list as below-
+                1
+                 2
+	
+                4
+               [0,1,2,3,4]
+
+                Example of dictionary comprehension is-
+                1
+	
+                x=[i : i+2 for i in range(5)]
+
+               The above code creates a list as below-
+               1
+	
+               [0: 2, 1: 3, 2: 4, 3: 5, 4: 6]
+
+
+
+3)Question:- What are Literals in Python and explain about different Literals  
+Answer:-A literal in python source code represents a fixed value for primitive data types. There are 5 types of literals in python-
+
+                 String literals– A string literal is created by assigning some text enclosed in single or double quotes to a variable. To create multiline literals, assign the multiline text enclosed in triple quotes. Eg.name=”Tanya”
+                A character literal– It is created by assigning a single character enclosed in double quotes. Eg. a=’t’
+                Numeric literals include numeric values that can be either integer, floating point value, or a complex number. Eg. a=50
+                Boolean literals– These can be 2 values- either True or False.
+                Literal Collections– These are of 4 types-
+
+              a) List collections-Eg. a=[1,2,3,’Amit’]
+
+              b) Tuple literals- Eg. a=(5,6,7,8)
+
+              c) Dictionary literals- Eg. dict={1: ’apple’, 2: ’mango, 3: ’banana`’}
+
+              d) Set literals- Eg. {“Tanya”, “Rohit”, “Mohan”}
+
+              6. Special literal- Python has 1 special literal None which is used to return a null variable.
+
+
+
+
+4)Question:-  How will you check if all characters in a string are alphanumeric?
+
+
+Answer:-For this, we use the method isalnum().
+
+
+5)Question:-  How will you convert a list into a string?
+Answer:-We will use the join() method for this.
+                >>> nums=['one','two','three','four','five','six','seven']
+                >>> s=' '.join(nums)
+                >>> s
+               ‘one two three four five six seven’
+
+
+
+
+6)Question:-  How will you remove a duplicate element from a list?
+Answer:-We can turn it into a set to do that.
+                 >>> list=[1,2,1,3,4,2]
+                 >>> set(list)
+
+                 {1, 2, 3, 4}
+
+7)Question:-  What do you know about relational operators in Python.
+Answer:-Less than (<),Greater than (>) ,Less than or equal to (<=),Greater than or equal to (>=) ,Equal to (==),Not equal to (!=) 
+                
+
+
+8)Question:-  What is recursion?
+Answer:-When a function makes a call to itself, it is termed recursion. But then, in order for it to avoid forming an infinite loop, we must have a base condition.
+
+                    Let’s take an example.
+                   >>> def facto(n):
+                   if n==1: return 1
+                   return n*facto(n-1)
+                   >>> facto(4)
+
+                   24
+
+
+
+9)Question:- What does the function zip() do? 
+Answer:-One of the less common functions with beginners, zip() returns an iterator of tuples.
+                 >>> list(zip(['a','b','c'],[1,2,3]))
+
+                [(‘a’, 1), (‘b’, 2), (‘c’, 3)]
+
+                Here, it pairs items from the two lists and creates tuples with those. But it doesn’t have to be lists.
+                >>> list(zip(('a','b','c'),(1,2,3)))
+
+                [(‘a’, 1), (‘b’, 2), (‘c’, 3)]
+
+
+10)Question:-  What if you want to toggle case for a Python string?
+Answer:- We have the swapcase() method from the str class to do just that.
+                   >>> 'AyuShi'.swapcase()
+
+                   ‘aYUsHI’
+
+
+11)Question:-  What is a function?
+Answer:- A function is a block of code which is executed only when a call is made to the function. def keyword is used to define a particular function as shown below:
+                   >>> def greater(a,b):
+                          return a is a>b else b
+                    >>> greater(3,3.5)
+
+                            3.5
+
+
+12)Question:-   What data types does Python support?
+
+Answer:-Python provides us with five kinds of data types:
+
+                   Numbers – Numbers use to hold numerical values.
+                    >>> a=7.0
+                   >>>
+
+                 Strings – A string is a sequence of characters. We declare it using single or double quotes.
+                   >>> title="Ayushi's Book"
+
+             Lists – A list is an ordered collection of values, and we declare it using square brackets.
+              >>> colors=['red','green','blue']
+            >>> type(colors)
+
+             <class ‘list’>
+
+           Tuples – A tuple, like a list, is an ordered collection of values. The difference. However, is that a tuple is immutable. This means that we cannot change a value in it.
+            >>> name=('Ayushi','Sharma')
+             >>> name[0]='Avery'
+
+            Traceback (most recent call last):
+
+            File “<pyshell#129>”, line 1, in <module>
+
+              name[0]=’Avery’
+
+            TypeError: ‘tuple’ object does not support item assignment
+
+               Dictionary – A dictionary is a data structure that holds key-value pairs. We declare it using curly braces.
+                   >>> squares={1:1,2:4,3:9,4:16,5:25}
+            >>> type(squares)
+
+               <class ‘dict’>
+              >>> type({})
+
+             <class ‘dict’>
+
+            We can also use a dictionary comprehension:
+           >>> squares={x:x**2 for x in range(1,6)}
+           >>> squares
+
+          {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+
+
+13)Question:-  What are global, protected, and private attributes in Python?
+
+     Answer:-      The attributes of a class are also called variables. There are three access modifiers in Python for variables, namely
+
+                                a.  public – The variables declared as public are accessible everywhere, inside or outside the class.
+
+                               b. private – The variables declared as private are accessible only within the current class.
+
+                              c. protected – The variables declared as protected are accessible only within the current package.
+
+                               Attributes are also classified as:
+
+                                – Local attributes are defined within a code-block/method and can be accessed only within that code-block/method.
+
+                              – Global attributes are defined outside the code-block/method and can be accessible everywhere.
+
+                             class Mobile:
+                              m1 = "Samsung Mobiles" //Global attributes
+                               def price(self):
+                            m2 = "Costly mobiles"   //Local attributes
+                            return m2
+                            Sam_m = Mobile()
+                            print(Sam_m.m1)
+
+
+
+14)Question:-  How can you concatenate two tuples?
+Answer:- tup1=(1,"a",True)
+                   tup2=(4,5,6)
+                   tup1+tup2
+
+
+15)Question:-  What is break, continue and pass in Python?
+Answer:- Break 	The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.
+                  Continue 	The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.
+                  Pass 	As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.
+
+                  pat = [1, 3, 2, 1, 2, 3, 1, 0, 1, 3]
+                   for p in pat:
+                       pass
+                         if (p == 0):
+                             current = p
+                              break
+                         elif (p % 2 == 0):
+                                continue
+                               print(p)    # output => 1 3 1 3 1
+                               print(current)    # output => 0
+
+
+16)Question:- What is slicing in Python? 
+Answer:- Syntax for slicing is [start : stop : step]
+
+
+17)Question:- Explain split() and join() functions in Python?  
+Answer:- 
+
+              You can use split() function to split a string based on a delimiter to a list of strings.
+               You can use join() function to join a list of strings based on a delimiter to give a single string.
+
+             string = "This is a string."
+             string_list = string.split(' ') #delimiter is ‘space’ character or ‘ ‘
+             print(string_list) #output: ['This', 'is', 'a', 'string.']
+            print(' '.join(string_list)) #output: This is a string.
+
+
+
+
+18)Question:-  What does *args and **kwargs mean?
+Answer:-*args is a special syntax used in the function definition to pass variable-length arguments.
+                   def multiply(a, b, *argv):
+                    mul = a * b
+                   for num in argv:
+                  mul *= num
+                  return mul
+                 print(multiply(1, 2, 3, 4, 5)) #output: 120
+               **kwargs
+
+               **kwargs is a special syntax used in the function definition to pass variable-length keyworded arguments.
+                def tellArguments(**kwargs):
+                        for key, value in kwargs.items():
+                             print(key + ": " + value)
+                             tellArguments(arg1 = "argument 1", arg2 = "argument 2", arg3 = "argument 3")
+                                   #output:
+                                    # arg1: argument 1
+                                   # arg2: argument 2
+                                  # arg3: argument 3
+
+19)Question:-  When will you use the Python Decorator?
+Answer:- Python Decorator is used to adjusting the functions in Python syntax quickly.
+
+
+
+
+20)Question:-  What Is Python While Loop?
+Answer:-A While loop is used to repeat a section of code an unknown number of times until a specific condition is met.
+
+
+
